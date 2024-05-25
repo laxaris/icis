@@ -25,7 +25,7 @@ public class SessionController {
         this.userService = userService;
     }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
     @PostMapping(path="/login", consumes = "application/json")
     public ResponseEntity<?> hndLogin(@RequestBody AuthenticationRequest request) {
         AuthenticationResponse result;
@@ -54,7 +54,7 @@ public class SessionController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
     @PostMapping(path="/iyteregister", consumes = "application/json")
     public ResponseEntity<?> handleSignUp(@RequestBody AuthenticationRequest request) {
 
@@ -81,7 +81,7 @@ public class SessionController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
     @PostMapping(path="/companyregister",consumes = "application/json")
     public ResponseEntity<?> handleSignUp(@RequestBody AuthenticationRequestCompany request) {
 
@@ -101,7 +101,7 @@ public class SessionController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
     @PostMapping(path="/resetpassword",consumes = "application/json")
     public ResponseEntity<?> hndResetPassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
         String email = resetPasswordRequest.getEmail();
@@ -122,7 +122,7 @@ public class SessionController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email code is not correct.");
         }
     }
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
     @PostMapping(path="/forgotpassword",consumes = "application/json")
     public ResponseEntity<?> hndForgotPassword(@RequestBody ForgotPasswordRequest forgotPasswordRequest){
         String email = forgotPasswordRequest.getEmail();
@@ -135,7 +135,7 @@ public class SessionController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
     @PostMapping(path="/checktoken",consumes = "application/json")
     public ResponseEntity<?> hndCheckToken(HttpServletRequest request){
         String token = request.getHeader("Authorization");
