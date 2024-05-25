@@ -41,7 +41,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //sirket offer yarattigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/createoffer", consumes = "application/json")
     public ResponseEntity<?> hndCreateOffer(HttpServletRequest request, @RequestBody PostOfferRequest offerRequest) {
         try{
@@ -61,7 +61,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //Ogrenci staj imkanlarini gordugu yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/showoffers")
     public ResponseEntity<?> hndShowAllOffers(HttpServletRequest request) {
         try{
@@ -89,7 +89,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/showoffers/{offerId}")
     public ResponseEntity<?> hndShowOfferDetails(HttpServletRequest request, @PathVariable("offerId") int offerId) {
         try{
@@ -118,7 +118,7 @@ public class OfferController {
     //#####################################################################################################################
     //Student staja basvurdugu yer
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/applyinternship/{offerId}")
     public ResponseEntity<?> hndApplyForInternship(HttpServletRequest request, @PathVariable("offerId") int offerId) {
         try{
@@ -161,7 +161,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //Staff company register onayladigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/managecompanyapplication")
     public ResponseEntity<?> hndShowCompanyApplications(HttpServletRequest request){
         try{
@@ -188,7 +188,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/managecompanyapplication/{companyId}", consumes = "application/json")
     public ResponseEntity<?> hndApproveCompany(HttpServletRequest request, @PathVariable("companyId") int companyId) {
 
@@ -231,7 +231,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //Staff companylerin yayinladigi offerlari onayladigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/manageoffers")
     public ResponseEntity<?> hndShowNotApprovedCompanyOffers(HttpServletRequest request) {
         try{
@@ -258,7 +258,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/manageoffers/{offerId}")
     public ResponseEntity<?> hndViewOfferDetailsForApproveDisapprove(HttpServletRequest request, @PathVariable("offerId") int offerId) {
         try{
@@ -285,7 +285,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/approverejectoffer/{offerId}")
     public ResponseEntity<?> hndApproveDisapproveOffer(HttpServletRequest request, @PathVariable("offerId") int offerId) {
         try{
@@ -329,7 +329,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //Company kendisine gelen applicationlari onayladigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/applicationstocompany")
     public ResponseEntity<?> hndShowApplicationsToCompany(HttpServletRequest request) {
         try{
@@ -360,7 +360,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/applicationstocompany/{applicationId}")
     public ResponseEntity<?> hndShowApplicationsToCompanyDetails(HttpServletRequest request,
                                                                  @PathVariable("applicationId") int applicationId) {
@@ -393,7 +393,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/approveapplicationstocompany/{applicationId}")
     public ResponseEntity<?> hndApproveApplication(HttpServletRequest request,
                                                    @PathVariable("applicationId") int applicationId) {
@@ -423,7 +423,7 @@ public class OfferController {
     }
     //#####################################################################################################################
     //Studentin companylerin onayladigi staj basvurularini gordugu ve kendisinin de onayladigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/studentapprovedapplications")
     public ResponseEntity<?> hndShowStudentApprovedApplications(HttpServletRequest request) {
         try{
@@ -453,7 +453,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/studentapprovedapplications/{applicationId}")
     public ResponseEntity<?> hndApproveApplicationStudent(HttpServletRequest request,
                                                           @PathVariable("applicationId") String applicationId) {
@@ -493,7 +493,7 @@ public class OfferController {
     }
     //#####################################################################################################################
     //staff sirket student karsilikli kabul edildip staj basladigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/staffshowinternshipsstarted")
     public ResponseEntity<?> hndShowInternshipsStarted(HttpServletRequest request) {
         try{
@@ -523,7 +523,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/staffshowinternshipsstarted/{applicationId}")
     public ResponseEntity<?> hndShowInternshipDetails(HttpServletRequest request,
                                                       @PathVariable("applicationId") int applicationId) {
@@ -558,7 +558,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //sirketin form yukledigi yer
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/applicationforms")
     public ResponseEntity<?> hndShowUploadApplicationFormCompany(HttpServletRequest request) {
         try{
@@ -589,7 +589,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/applicationforms/{applicationId}")
     public ResponseEntity<?> hndShowUploadApplicationFormCompanyDetails(HttpServletRequest request,
                                                                         @PathVariable("applicationId") int applicationId) {
@@ -624,7 +624,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //staff approve form
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/approveforms")
     public ResponseEntity<?> hndStaffApplyApplicationForm(HttpServletRequest request) {
         try{
@@ -655,7 +655,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/approveforms/{applicationId}")
     public ResponseEntity<?> hndStaffApplyApplicationFormDetails(HttpServletRequest request,
                                                                         @PathVariable("applicationId") int applicationId) {
@@ -688,7 +688,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping(path="/approveapplicationform/{applicationId}")
     public ResponseEntity<?> hndApproveApplicationForm(HttpServletRequest request,
                                                         @PathVariable("applicationId") int applicationId) {
@@ -721,7 +721,7 @@ public class OfferController {
 
     //#####################################################################################################################
     //upload download dokumanlar kismi
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping("/uploadsgkdocument/{applicationId}")
     public ResponseEntity<?> hndStaffUploadSgk(HttpServletRequest request,
                                                @RequestParam("file") MultipartFile file,
@@ -755,7 +755,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/downloadsgkdocument/{applicationId}")
     public ResponseEntity<?> hndDownloadSgkDocument(HttpServletRequest request,
                                                     @PathVariable("applicationId") int applicationId) {
@@ -780,7 +780,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/downloadapplicationform/{applicationId}")
     public ResponseEntity<?> hndDownloadApplicationForm(HttpServletRequest request,
                                                         @PathVariable("applicationId") int applicationId){
@@ -805,7 +805,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @PostMapping("/uploadapplicationform/{applicationId}")
     public ResponseEntity<?> hndStaffUploadApplicationForm(HttpServletRequest request,
                                                @RequestParam("file") MultipartFile file,
@@ -838,7 +838,7 @@ public class OfferController {
         }
     }
 
-    @CrossOrigin(origins = "https://icis-frontend.vercel.app/")
+    @CrossOrigin(origins = "https://icis-frontend.vercel.app")
     @GetMapping(path="/announcements")
     public ResponseEntity<?> hndShowAnnouncements() {
         try{
