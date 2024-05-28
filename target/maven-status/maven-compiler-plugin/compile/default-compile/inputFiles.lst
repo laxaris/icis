@@ -13,6 +13,7 @@
 /Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/Entity/Application.java
 /Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/RequestEntities/AuthenticationRequestCompany.java
 /Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/DAO/OnlineUserDAO.java
+/Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/Service/DatabaseService.java
 /Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/ResponseEntities/NotApprovedCompaniesResponse.java
 /Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/Utils/MailUtil.java
 /Users/hasanbasrierdogan/Downloads/icis/src/main/java/com/icis/demo/Service/AuthorizationService.java
