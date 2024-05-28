@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 
+import com.icis.demo.Service.DatabaseService;
+
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.icis.demo", "com.icis.demo.Utils"})
 @EnableCaching
@@ -17,5 +19,7 @@ public class App {
     @PostConstruct
     public void init() {
         System.out.println("com.icis.demo.App started");
+        DatabaseService databaseService = new DatabaseService();
+        databaseService.showTables();
     }
 }
