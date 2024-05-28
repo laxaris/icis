@@ -11,6 +11,7 @@ com/icis/demo/DAO/DocumentStorableDAO.class
 com/icis/demo/DAO/ObsDAO.class
 com/icis/demo/Entity/DocumentStorable.class
 com/icis/demo/App.class
+com/icis/demo/Config/SecurityConfig.class
 com/icis/demo/Service/UserService.class
 com/icis/demo/Utils/DocumentUtil.class
 com/icis/demo/ResponseEntities/NotApprovedOffersResponse.class
